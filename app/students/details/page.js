@@ -22,6 +22,7 @@ export default function StudentDetails() {
         phone={phone}
         gender={gender}
         age={age}
+        address={address}
         usn={usn}
       />
     </Suspense>
