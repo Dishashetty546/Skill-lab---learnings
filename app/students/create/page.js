@@ -4,7 +4,9 @@ import React, { useState } from "react";
 import { Upload } from "lucide-react";
 import { supabase } from "@/app/lib/supabase";
 import { useRouter } from "next/navigation";
+import useStore from "@/app/stores/Studentstore";
 export default function CreateStudent() {
+  const { setactiveStudent } = useStore();
   const [name, setName] = useState("");
   const [usn, setusn] = useState("");
   const [age, setage] = useState("");
