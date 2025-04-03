@@ -1,8 +1,17 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 export default function StudentDetails() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <StudentDetailsContent />
+    </Suspense>
+  );
+}
+
+function StudentDetailsContent() {
   const searchParams = useSearchParams();
 
   // Extract data from URL parameters
